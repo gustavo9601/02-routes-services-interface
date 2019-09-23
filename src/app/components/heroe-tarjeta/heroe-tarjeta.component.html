@@ -1,0 +1,18 @@
+<div class="card animated fadeIn" >
+  <img class="card-img-top" src="{{heroe.img}}" alt="{{heroe.nombre}}">
+  <div class="card-body">
+    <h5 class="card-title">{{heroe.nombre}}</h5>
+    <p class="card-text">{{heroe.bio}}</p>
+    <p class="card-text">
+      <small class="text-muted">{{heroe.aparicion}}</small>
+    </p>
+    <!--
+    (click)="verHeroe(i)"  // ejecutara la funcion
+    -->
+    <button (click)="verHeroe(i)" class="btn btn-outline-primary btn-block">Ver mas boton..</button>
+    <!--
+    [routerLink]="['/heroe',i]"  // le pasamos el dos parametros a la url
+    -->
+    <a [routerLink]="['/heroe',i]" class="btn btn-outline-primary btn-block">Ver mas link ..</a>
+  </div>
+</div>

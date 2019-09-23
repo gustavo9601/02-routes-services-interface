@@ -1,0 +1,31 @@
+<h1>Heroes
+  <small>Marvel y DC</small>
+</h1>
+<hr>
+
+<div class="card-columns">
+
+
+  <!--
+  *ngFor="let heroe of heroes; let i = index"
+  -->
+
+<!--Retutilizamos el componente
+y se repetira la cantidad de veces de acuerdo al array heroes
+-->
+
+  <!--
+  [heroe]="" // es la variable con el decorador Input, para que reciba parametros desde el padre
+  -->
+
+  <!--
+(heroeSeleccionado)="verHeroe(event)"  // heroeSeleccionado es un evento personalizado
+ ejecutara la funcion verHeroe,  y pasara con $event, el valor emitido
+  -->
+
+  <app-heroe-tarjeta (heroeSeleccionado)="verHeroe($event)" [heroe]="foo" [index]="i" *ngFor="let foo of heroes; let i = index">
+
+  </app-heroe-tarjeta>
+
+
+</div>
